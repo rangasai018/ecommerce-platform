@@ -2,20 +2,9 @@
 
 ## Overview
 
-This project is a full-stack E-Commerce Platform designed to provide a seamless online shopping experience for customers while offering product management capabilities for sellers and administrators.
+A full-stack E-Commerce Platform built using Spring Boot, MySQL, HTML, CSS, and JavaScript.
 
-The platform aims to support product browsing, user authentication, shopping cart management, order processing, seller operations, and administrative controls.
-
----
-
-## Objectives
-
-* Build a scalable e-commerce platform.
-* Provide secure user authentication and authorization.
-* Enable customers to browse and purchase products.
-* Allow sellers to manage products and inventory.
-* Provide administrative controls for monitoring platform activities.
-* Integrate modern web technologies and database management.
+The project is designed to provide an online marketplace where customers can browse products, register accounts, and purchase items while sellers can manage their products and inventory.
 
 ---
 
@@ -39,7 +28,7 @@ The platform aims to support product browsing, user authentication, shopping car
 * CSS3
 * JavaScript
 
-### Development Tools
+### Tools
 
 * VS Code
 * Git
@@ -50,54 +39,27 @@ The platform aims to support product browsing, user authentication, shopping car
 
 ## Current Features
 
-### Backend Features
+### Backend
 
-#### Application Setup
-
-* Spring Boot project configuration
-* Maven dependency management
-* REST API architecture
-
-#### Database Integration
-
-* MySQL database connection
-* JPA configuration
-* Hibernate ORM integration
-
-#### User Management
-
+* Spring Boot project setup
+* REST API foundation
+* MySQL database integration
+* JPA and Hibernate configuration
 * User entity creation
 * User repository implementation
-* User data persistence
-
-#### Authentication Foundation
-
-* Registration endpoint
+* Authentication controller setup
 * Security configuration
-* API structure for future authentication implementation
+* Database connectivity testing
 
----
+### Frontend
 
-### Frontend Features
-
-#### Home Page
-
+* Homepage UI
 * Navigation bar
 * Search bar
-* Customer login navigation
-* Seller login navigation
-* Featured products section
-
-#### Authentication Pages
-
-* Login page
-* Registration page
-
-#### Styling
-
-* Responsive layout
-* Modern user interface design
-* Reusable CSS structure
+* Customer Login page
+* Customer Registration page
+* Seller Login page
+* Responsive styling using CSS
 
 ---
 
@@ -128,6 +90,7 @@ ecommerce-platform
 │   ├── home.html
 │   ├── login.html
 │   ├── register.html
+│   ├── seller-login.html
 │   ├── style.css
 │   └── app.js
 │
@@ -136,21 +99,21 @@ ecommerce-platform
 
 ---
 
-## Database Configuration
+## Database
 
-### Database
+Database Name:
 
 ```sql
 ecommerce_db
 ```
 
-### Current Tables
+Current Table:
 
 ```sql
 user
 ```
 
-### User Table Fields
+### User Entity Fields
 
 | Field    | Type   |
 | -------- | ------ |
@@ -161,35 +124,20 @@ user
 
 ---
 
-## API Endpoints
+## Available Pages
 
-### Home Endpoint
+### Homepage
 
-```http
-GET /
-```
+* Search Bar
+* Customer Login Navigation
+* Seller Login Navigation
+* Featured Products Section
 
-Response:
+### Authentication Pages
 
-```text
-E-commerce Backend Running 🚀
-```
-
-### Register User
-
-```http
-POST /auth/register
-```
-
-Request Body:
-
-```json
-{
-  "name": "Sai",
-  "email": "sai@gmail.com",
-  "password": "1234"
-}
-```
+* Customer Login
+* Customer Registration
+* Seller Login
 
 ---
 
@@ -210,61 +158,22 @@ http://localhost:8080
 
 ### Frontend
 
-Open:
-
-```text
-frontend/home.html
-```
-
-Or run using Live Server.
+Open `home.html` using Live Server.
 
 ---
 
-## Planned Features
-
-### Authentication
+## Upcoming Features
 
 * Login API
-* BCrypt Password Encryption
+* Password Encryption
 * JWT Authentication
-* Role-Based Authorization
-
-### Customer Features
-
-* Product Search
-* Product Filtering
+* Product Management
 * Shopping Cart
 * Wishlist
-* Checkout Process
-* Order History
-
-### Seller Features
-
-* Seller Registration
-* Product Upload
-* Inventory Management
-* Sales Dashboard
-
-### Admin Features
-
-* User Management
-* Seller Management
-* Product Monitoring
-* Analytics Dashboard
-
-### Advanced Features
-
-* AI Chatbot
-* Product Recommendation System
-* Review and Rating System
-* Email Notifications
-* Payment Gateway Integration
-
----
-
-## Future Scope
-
-The platform can be expanded into a production-ready marketplace supporting multiple sellers, secure payment processing, intelligent recommendations, and advanced analytics.
+* Order Management
+* Seller Dashboard
+* Admin Dashboard
+* Payment Integration
 
 ---
 
