@@ -83,12 +83,27 @@ body{
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-footer{
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:green;
+    margin:10px 0;
+}
+
+.cart-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
     background:#1e293b;
     color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:40px;
+    cursor:pointer;
 }
 
 .auth-container{
@@ -133,10 +148,17 @@ footer{
     background:#1e293b;
     color:white;
     cursor:pointer;
-    margin-top:10px;
 }
 
 .welcome-text{
     margin-top:15px;
     color:#555;
+}
+
+footer{
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
 }
