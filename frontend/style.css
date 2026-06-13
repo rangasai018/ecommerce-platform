@@ -135,3 +135,8 @@ footer{
     cursor:pointer;
     margin-top:10px;
 }
+
+.welcome-text{
+    margin-top:15px;
+    color:#555;
+}
