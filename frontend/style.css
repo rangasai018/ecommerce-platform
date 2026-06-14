@@ -195,3 +195,37 @@ footer p{
     font-size:20px;
     cursor:pointer;
 }
+
+.hero{
+    background:linear-gradient(
+        135deg,
+        #1e293b,
+        #334155
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.shop-btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:5px;
+    background:white;
+    color:#1e293b;
+    font-weight:bold;
+    cursor:pointer;
+}
