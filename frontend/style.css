@@ -253,3 +253,18 @@ footer p{
 .product-info p{
     margin-bottom:15px;
 }
+
+.cart-container{
+    max-width:800px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
