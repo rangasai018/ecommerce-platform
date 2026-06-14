@@ -229,3 +229,27 @@ footer p{
     font-weight:bold;
     cursor:pointer;
 }
+
+.product-details{
+    display:flex;
+    gap:40px;
+    padding:50px;
+    background:white;
+}
+
+.product-details img{
+    width:400px;
+    border-radius:10px;
+}
+
+.product-info{
+    flex:1;
+}
+
+.product-info h1{
+    margin-bottom:15px;
+}
+
+.product-info p{
+    margin-bottom:15px;
+}
