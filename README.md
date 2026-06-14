@@ -2,9 +2,7 @@
 
 ## Overview
 
-A full-stack E-Commerce Platform built using Spring Boot, MySQL, HTML, CSS, and JavaScript.
-
-The project is designed to provide an online marketplace where customers can browse products, register accounts, and purchase items while sellers can manage their products and inventory.
+E-Commerce Platform is a full-stack web application built using Spring Boot, MySQL, HTML, CSS, and JavaScript. The project provides a foundation for an online shopping platform with customer, seller, and product management features.
 
 ---
 
@@ -41,25 +39,49 @@ The project is designed to provide an online marketplace where customers can bro
 
 ### Backend
 
-* Spring Boot project setup
+* Spring Boot application setup
 * REST API foundation
 * MySQL database integration
-* JPA and Hibernate configuration
+* Hibernate ORM configuration
 * User entity creation
 * User repository implementation
-* Authentication controller setup
+* Authentication controller
 * Security configuration
-* Database connectivity testing
 
 ### Frontend
 
-* Homepage UI
+#### Home Page
+
 * Navigation bar
 * Search bar
+* Customer Login navigation
+* Seller Login navigation
+* Shopping Cart navigation
+* Hero banner section
+* Product categories section
+* Featured products section
+* Product cards with images
+* Add To Cart buttons
+* Responsive layout
+* Footer branding
+
+#### Authentication Pages
+
 * Customer Login page
 * Customer Registration page
 * Seller Login page
-* Responsive styling using CSS
+
+#### Product Pages
+
+* Product Details page
+
+#### Cart Pages
+
+* Shopping Cart page
+
+#### JavaScript
+
+* External JavaScript integration through app.js
 
 ---
 
@@ -70,18 +92,6 @@ ecommerce-platform
 │
 ├── backend
 │   ├── src
-│   │   ├── main
-│   │   │   ├── java
-│   │   │   │   └── com.ecommerce.backend
-│   │   │   │       ├── controller
-│   │   │   │       ├── model
-│   │   │   │       ├── repository
-│   │   │   │       ├── SecurityConfig.java
-│   │   │   │       └── BackendApplication.java
-│   │   │   └── resources
-│   │   │       └── application.properties
-│   │   └── test
-│   │
 │   ├── pom.xml
 │   ├── mvnw
 │   └── mvnw.cmd
@@ -91,29 +101,35 @@ ecommerce-platform
 │   ├── login.html
 │   ├── register.html
 │   ├── seller-login.html
+│   ├── product.html
+│   ├── cart.html
 │   ├── style.css
 │   └── app.js
 │
-└── docs
+├── docs
+│
+├── README.md
+│
+└── LICENSE
 ```
 
 ---
 
 ## Database
 
-Database Name:
+### Database Name
 
 ```sql
 ecommerce_db
 ```
 
-Current Table:
+### Current Table
 
 ```sql
 user
 ```
 
-### User Entity Fields
+### User Fields
 
 | Field    | Type   |
 | -------- | ------ |
@@ -126,54 +142,71 @@ user
 
 ## Available Pages
 
-### Homepage
+### Home Page
 
-* Search Bar
-* Customer Login Navigation
-* Seller Login Navigation
-* Featured Products Section
+* Home page
+* Categories section
+* Featured products
+* Product cards
 
-### Authentication Pages
+### Authentication
 
 * Customer Login
 * Customer Registration
 * Seller Login
 
+### Shopping
+
+* Product Details Page
+* Shopping Cart Page
+
 ---
 
-## Running the Project
-
-### Backend
+## Running the Backend
 
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
 
-Application URL:
+Backend URL:
 
 ```text
 http://localhost:8080
 ```
 
-### Frontend
+---
 
-Open `home.html` using Live Server.
+## Running the Frontend
+
+Open with Live Server:
+
+```text
+frontend/home.html
+```
+
+Frontend URL:
+
+```text
+http://127.0.0.1:5500/frontend/home.html
+```
 
 ---
 
-## Upcoming Features
+## Planned Features
 
-* Login API
+* User Login API
+* User Registration API Integration
 * Password Encryption
 * JWT Authentication
 * Product Management
-* Shopping Cart
-* Wishlist
+* Dynamic Product Listing
+* Shopping Cart Functionality
 * Order Management
+* Wishlist
 * Seller Dashboard
 * Admin Dashboard
-* Payment Integration
+* Payment Gateway Integration
 
 ---
 
