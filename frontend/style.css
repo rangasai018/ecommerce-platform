@@ -170,3 +170,28 @@ footer h3{
 footer p{
     margin:5px 0;
 }
+
+.categories{
+    padding:40px;
+    background:white;
+}
+
+.categories h2{
+    margin-bottom:20px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.category-card{
+    background:#1e293b;
+    color:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+}
