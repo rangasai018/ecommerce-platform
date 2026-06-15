@@ -376,3 +376,16 @@ footer p{
 .shop-btn:hover{
     background:#e2e8f0;
 }
+
+.cart-container h1{
+    margin-bottom:20px;
+}
+
+.cart-container h2{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.cart-container p{
+    margin-top:15px;
+}
