@@ -389,3 +389,13 @@ footer p{
 .cart-container p{
     margin-top:15px;
 }
+
+.auth-card a{
+    color:#1e293b;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.auth-card a:hover{
+    text-decoration:underline;
+}
