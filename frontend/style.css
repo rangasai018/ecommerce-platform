@@ -277,3 +277,102 @@ footer p{
     transform:translateY(-5px);
     box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
+
+/* Product Rating */
+
+.rating{
+    color:orange;
+    font-size:18px;
+    margin:10px 0;
+}
+
+/* Customer Reviews */
+
+.review{
+    background:#f5f5f5;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+    border-left:4px solid #1e293b;
+}
+
+.review h4{
+    margin-bottom:8px;
+    color:#1e293b;
+}
+
+.review p{
+    margin:0;
+    color:#555;
+}
+
+/* Related Products */
+
+.related-products{
+    padding:40px;
+}
+
+.related-products h2{
+    margin-bottom:20px;
+}
+
+/* Product Links */
+
+.card a{
+    text-decoration:none;
+    color:black;
+}
+
+.card a:hover{
+    color:#1e293b;
+}
+
+/* Better Product Details Page */
+
+.product-info h2{
+    margin-top:25px;
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+/* Clickable Product Titles */
+
+.card a{
+    text-decoration:none;
+    color:black;
+    transition:0.3s;
+}
+
+.card a:hover{
+    color:#1e293b;
+}
+
+/* Product Card Hover Effect */
+
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Navbar Buttons Hover */
+
+.nav-buttons button:hover{
+    background:#475569;
+    color:white;
+}
+
+/* Cart Button Hover */
+
+.cart-btn:hover{
+    background:#334155;
+}
+
+/* Shop Button Hover */
+
+.shop-btn:hover{
+    background:#e2e8f0;
+}
