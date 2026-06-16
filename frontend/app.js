@@ -1,4 +1,3 @@
-```javascript
 console.log("E-Shop Loaded Successfully");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,4 +11,3 @@ if (searchBar) {
         console.log("Search bar selected");
     });
 }
-```
