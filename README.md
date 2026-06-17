@@ -58,12 +58,14 @@ E-Commerce Platform is a full-stack web application built using Spring Boot, MyS
 * Seller Login navigation
 * Shopping Cart navigation
 * Hero banner section
+* Shop Now button navigation
 * Product categories section
 * Featured products section
 * Product cards with images
 * Clickable product navigation
 * Product card hover effects
 * Category card hover effects
+* Customer benefits section
 * Add To Cart buttons
 * Responsive layout
 * Footer branding
@@ -73,6 +75,7 @@ E-Commerce Platform is a full-stack web application built using Spring Boot, MyS
 * Customer Login page
 * Customer Registration page
 * Seller Login page
+* Navigation between authentication pages and home page
 
 #### Product Pages
 
@@ -95,6 +98,8 @@ E-Commerce Platform is a full-stack web application built using Spring Boot, MyS
 * External JavaScript integration through app.js
 * DOM content loaded event handling
 * Search bar event detection
+* Product search filtering
+* Add To Cart button event handling
 * Browser console logging
 
 ---
@@ -159,9 +164,12 @@ user
 ### Home Page
 
 * Home page
+* Hero banner section
 * Categories section
 * Featured products
 * Product cards
+* Customer benefits section
+* Product search functionality
 
 ### Authentication
 
