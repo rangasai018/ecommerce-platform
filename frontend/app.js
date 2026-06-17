@@ -8,13 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (searchBar) {
 
-        searchBar.addEventListener("focus", () => {
-            console.log("Search bar selected");
+        searchBar.addEventListener("keyup", () => {
+
+            const searchText = searchBar.value.toLowerCase();
+
+            const products = document.querySelectorAll(".card");
+
+            products.forEach(product => {
+
+                const productName = product
+                    .querySelector("h3")
+                    .innerText
+                    .toLowerCase();
+
+                if (productName.includes(searchText)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+
+            });
+
         });
 
-        searchBar.addEventListener("keyup", () => {
-            console.log("Searching for:", searchBar.value);
-        });
     }
 
     const cartButtons = document.querySelectorAll(".cart-btn");
