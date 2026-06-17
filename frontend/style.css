@@ -399,3 +399,12 @@ footer p{
 .auth-card a:hover{
     text-decoration:underline;
 }
+
+.features{
+    padding:40px;
+    background:white;
+}
+
+.features h2{
+    margin-bottom:20px;
+}
