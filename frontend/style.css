@@ -424,3 +424,12 @@ footer p{
 .product-info li{
     margin-bottom:8px;
 }
+
+.offers{
+    padding:40px;
+    background:#f8fafc;
+}
+
+.offers h2{
+    margin-bottom:20px;
+}
