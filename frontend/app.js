@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("All components loaded successfully");
 
+    let cartCount = localStorage.getItem("cartCount") || 0;
+
     const searchBar = document.querySelector(".search-bar");
 
     if (searchBar) {
@@ -38,7 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
     cartButtons.forEach(button => {
 
         button.addEventListener("click", () => {
-            console.log("Product added to cart");
+
+            cartCount++;
+
+            localStorage.setItem("cartCount", cartCount);
+
+            alert("Product added to cart!");
+
+            console.log("Cart Items:", cartCount);
+
         });
 
     });
