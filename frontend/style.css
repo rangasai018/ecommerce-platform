@@ -408,3 +408,11 @@ footer p{
 .features h2{
     margin-bottom:20px;
 }
+
+.cart-summary{
+    margin:20px 0;
+}
+
+.cart-summary p{
+    margin:10px 0;
+}
