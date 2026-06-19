@@ -416,3 +416,11 @@ footer p{
 .cart-summary p{
     margin:10px 0;
 }
+
+.product-info ul{
+    margin:15px 0 20px 20px;
+}
+
+.product-info li{
+    margin-bottom:8px;
+}
