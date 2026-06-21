@@ -24,18 +24,13 @@ public class AuthController {
     return userRepository.save(user);
 }
 
-    @PostMapping("/login")
-    public String login(@RequestBody User loginUser) {
-
-        Optional<User> user =
-                userRepository.findByEmail(loginUser.getEmail());
-
-        if (user.isPresent() &&
-            user.get().getPassword().equals(loginUser.getPassword())) {
-
-            return "Login Successful";
-        }
-
-        return "Invalid Email or Password";
+   @PostMapping("/login")
+   public Object login(@RequestBody User loginUser) {
+    Optional<User> user = userRepository.findByEmail(loginUser.getEmail());
+    if (user.isPresent() && user.get().getPassword().equals(loginUser.getPassword())) {
+        return user.get();
     }
+    return "Invalid Email or Password";
+}
+
 }

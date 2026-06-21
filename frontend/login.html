@@ -89,18 +89,20 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
                 })
             }
         );
-
-        const result = await response.text();
-
-        document.getElementById("message").innerText = result;
-
-        if (result === "Login Successful") {
-
-            setTimeout(() => {
-                window.location.href = "home.html";
-            }, 1500);
-
+        
+        const result = await response.json();
+        
+        if (result.name) {
+            document.getElementById("message").innerText = "Login Successful";
+            sessionStorage.setItem("loggedInUser", result.name);
         }
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 1500);
+    
+    } else {
+        document.getElementById("message").innerText = "Invalid Email or Password";
+    }
 
     } catch (error) {
 

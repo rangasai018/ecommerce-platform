@@ -247,6 +247,14 @@
     </footer>
 
     <script src="app.js"></script>
+    
+    <script>
+    const userName = sessionStorage.getItem("loggedInUser");
+    if (userName) {
+        document.querySelector(".logo").innerHTML = "E-Shop | Welcome, " + userName;
+    }
+
+</script>
 
 </body>
 </html>
