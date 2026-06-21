@@ -16,17 +16,24 @@
 
         <input
             type="email"
+            id="email"
             placeholder="Enter Email"
         >
 
         <input
             type="password"
+            id="password"
             placeholder="Enter Password"
         >
 
-        <button class="auth-btn">
+        <button
+            class="auth-btn"
+            id="loginBtn"
+        >
             Login
         </button>
+
+        <p id="message"></p>
 
         <p class="welcome-text">
             Welcome back to E-Shop
@@ -51,6 +58,62 @@
     </div>
 
 </div>
+
+<script>
+
+document.getElementById("loginBtn").addEventListener("click", async () => {
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (!email || !password) {
+
+        document.getElementById("message").innerText =
+            "Please fill all fields.";
+
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:8080/auth/login",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            }
+        );
+
+        const result = await response.text();
+
+        document.getElementById("message").innerText = result;
+
+        if (result === "Login Successful") {
+
+            setTimeout(() => {
+                window.location.href = "home.html";
+            }, 1500);
+
+        }
+
+    } catch (error) {
+
+        document.getElementById("message").innerText =
+            "Backend connection error.";
+
+        console.error(error);
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>

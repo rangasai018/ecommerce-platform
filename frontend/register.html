@@ -16,22 +16,30 @@
 
         <input
             type="text"
+            id="name"
             placeholder="Enter Name"
         >
 
         <input
             type="email"
+            id="email"
             placeholder="Enter Email"
         >
 
         <input
             type="password"
+            id="password"
             placeholder="Enter Password"
         >
 
-        <button class="auth-btn">
+        <button
+            class="auth-btn"
+            id="registerBtn"
+        >
             Register
         </button>
+
+        <p id="message"></p>
 
         <p class="welcome-text">
             Join E-Shop and start shopping today
@@ -57,6 +65,64 @@
     </div>
 
 </div>
+
+<script>
+
+document.getElementById("registerBtn").addEventListener("click", async () => {
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (!name || !email || !password) {
+
+        document.getElementById("message").innerText =
+            "Please fill all fields.";
+
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:8080/auth/register",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    password
+                })
+            }
+        );
+
+        if (response.ok) {
+
+            document.getElementById("message").innerText =
+                "Registration Successful!";
+
+        } else {
+
+            document.getElementById("message").innerText =
+                "Registration Failed.";
+
+        }
+
+    } catch (error) {
+
+        document.getElementById("message").innerText =
+            "Backend connection error.";
+
+        console.error(error);
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
