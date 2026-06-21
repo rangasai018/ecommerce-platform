@@ -99,18 +99,10 @@ document.getElementById("registerBtn").addEventListener("click", async () => {
             }
         );
 
-        if (response.ok) {
-
-            document.getElementById("message").innerText =
-                "Registration Successful!";
-
-        } else {
-
-            document.getElementById("message").innerText =
-                "Registration Failed.";
-
-        }
-
+        const result = await response.text();
+        
+        document.getElementById("message").innerText = result; 
+    
     } catch (error) {
 
         document.getElementById("message").innerText =

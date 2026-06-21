@@ -15,10 +15,14 @@ public class AuthController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/register")
-    public User register(@RequestBody User user) {
-        return userRepository.save(user);
+   @PostMapping("/register")
+   public Object register(@RequestBody User user) {
+    Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
+    if (existingUser.isPresent()) {
+        return "Email already registered";
     }
+    return userRepository.save(user);
+}
 
     @PostMapping("/login")
     public String login(@RequestBody User loginUser) {
