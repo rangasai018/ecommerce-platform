@@ -22,27 +22,25 @@
 
     <h1>Your Cart</h1>
 
-    <div class="cart-item">
-        <h3>Laptop</h3>
-        <p>₹50,000</p>
-    </div>
-
-    <div class="cart-item">
-        <h3>Headphones</h3>
-        <p>₹2,000</p>
-    </div>
+    <div id="cartItems"></div>
 
     <hr>
 
     <div class="cart-summary">
 
-        <p><strong>Total Items:</strong> 2</p>
+        <p>
+            <strong>Total Items:</strong>
+            <span id="totalItems">0</span>
+        </p>
 
         <p><strong>Delivery:</strong> Free</p>
 
-        <p><strong>Discount:</strong> ₹1,000</p>
+        <p><strong>Discount:</strong> ₹0</p>
 
-        <h2>Total: ₹51,000</h2>
+        <h2>
+            Total:
+            <span id="totalPrice">₹0</span>
+        </h2>
 
     </div>
 
@@ -59,6 +57,43 @@
     </a>
 
 </div>
+
+<script>
+
+const cart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartItems =
+    document.getElementById("cartItems");
+
+let total = 0;
+
+cart.forEach(item => {
+
+    const div = document.createElement("div");
+
+    div.classList.add("cart-item");
+
+    div.innerHTML = `
+        <h3>${item.name}</h3>
+        <p>${item.price}</p>
+    `;
+
+    cartItems.appendChild(div);
+
+    total += Number(
+        item.price.replace(/[₹,]/g, "")
+    );
+
+});
+
+document.getElementById("totalItems").innerText =
+    cart.length;
+
+document.getElementById("totalPrice").innerText =
+    "₹" + total.toLocaleString();
+
+</script>
 
 </body>
 </html>

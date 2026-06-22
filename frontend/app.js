@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("All components loaded successfully");
 
-    let cartCount = localStorage.getItem("cartCount") || 0;
-
     const searchBar = document.querySelector(".search-bar");
 
     if (searchBar) {
@@ -41,13 +39,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
 
-            cartCount++;
+            const card = button.closest(".card");
 
-            localStorage.setItem("cartCount", cartCount);
+            if (!card) return;
 
-            alert("Product added to cart!");
+            const productName =
+                card.querySelector("h3").innerText;
 
-            console.log("Cart Items:", cartCount);
+            const productPrice =
+                card.querySelector(".price").innerText;
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({
+                name: productName,
+                price: productPrice
+            });
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+            alert(productName + " added to cart");
 
         });
 
