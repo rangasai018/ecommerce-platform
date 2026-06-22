@@ -34,6 +34,12 @@
                 </button>
             </a>
 
+            <a href="#" id="logoutBtn">
+                <button>
+                    Logout
+                </button>
+            </a>
+
         </div>
 
     </nav>
@@ -249,12 +255,18 @@
     <script src="app.js"></script>
     
     <script>
+    
     const userName = sessionStorage.getItem("loggedInUser");
     if (userName) {
         document.querySelector(".logo").innerHTML = "E-Shop | Welcome, " + userName;
     }
+    
+    const logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", () => {
+        sessionStorage.removeItem("loggedInUser");
+        window.location.href = "login.html";
+    });
 
 </script>
-
 </body>
 </html>
