@@ -20,11 +20,11 @@
 
         <div class="nav-buttons">
 
-            <a href="login.html">
+            <a href="login.html" id="loginLink">
                 <button>Customer Login</button>
             </a>
 
-            <a href="seller-login.html">
+            <a href="seller-login.html" id="sellerLink">
                 <button>Seller Login</button>
             </a>
 
@@ -253,20 +253,38 @@
     </footer>
 
     <script src="app.js"></script>
-    
+
     <script>
-    
+
     const userName = sessionStorage.getItem("loggedInUser");
-    if (userName) {
-        document.querySelector(".logo").innerHTML = "E-Shop | Welcome, " + userName;
-    }
-    
+
+    const loginLink = document.getElementById("loginLink");
+    const sellerLink = document.getElementById("sellerLink");
     const logoutBtn = document.getElementById("logoutBtn");
+
+    if (userName) {
+
+        document.querySelector(".logo").innerHTML =
+            "E-Shop | Welcome, " + userName;
+
+        loginLink.style.display = "none";
+        sellerLink.style.display = "none";
+
+    } else {
+
+        logoutBtn.style.display = "none";
+
+    }
+
     logoutBtn.addEventListener("click", () => {
+
         sessionStorage.removeItem("loggedInUser");
+
         window.location.href = "login.html";
+
     });
 
-</script>
+    </script>
+
 </body>
 </html>
