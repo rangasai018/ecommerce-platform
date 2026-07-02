@@ -1,110 +1,103 @@
-# E-Commerce Platform
+# 🛒 E-Commerce Platform
 
-## Overview
+A full-stack E-Commerce web application built using **Spring Boot, Java, HTML, CSS, JavaScript, H2 Database, Docker, Render, and Vercel**.
 
-E-Commerce Platform is a full-stack web application built using Spring Boot, MySQL, HTML, CSS, and JavaScript. The project provides a foundation for an online shopping platform with customer, seller, and product management features.
-
----
-
-## Technology Stack
-
-### Backend
-
-* Java 17
-* Spring Boot
-* Spring Security
-* Spring Data JPA
-* Maven
-
-### Database
-
-* MySQL
-
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-
-### Tools
-
-* VS Code
-* Git
-* GitHub
-* MySQL Workbench
+The application provides customer authentication, product browsing, shopping cart functionality, and a responsive user interface. It is deployed online with separate frontend and backend services.
 
 ---
 
-## Current Features
+# 🌐 Live Demo
 
-### Backend
+### Frontend (Vercel)
 
-* Spring Boot application setup
-* REST API foundation
-* MySQL database integration
-* Hibernate ORM configuration
-* User entity creation
-* User repository implementation
-* Authentication controller
-* Security configuration
+https://ecommerce-platform-theta-blue.vercel.app
 
-### Frontend
+### Backend API (Render)
 
-#### Home Page
-
-* Navigation bar
-* Search bar
-* Customer Login navigation
-* Seller Login navigation
-* Shopping Cart navigation
-* Hero banner section
-* Shop Now button navigation
-* Product categories section
-* Featured products section
-* Product cards with images
-* Clickable product navigation
-* Product card hover effects
-* Category card hover effects
-* Customer benefits section
-* Add To Cart buttons
-* Responsive layout
-* Footer branding
-
-#### Authentication Pages
-
-* Customer Login page
-* Customer Registration page
-* Seller Login page
-* Navigation between authentication pages and home page
-
-#### Product Pages
-
-* Product Details page
-* Product ratings
-* Customer reviews section
-* Related products section
-* Product availability information
-* Buy Now button
-
-#### Cart Pages
-
-* Shopping Cart page
-* Checkout button
-* Continue shopping navigation
-* Total items display
-
-#### JavaScript
-
-* External JavaScript integration through app.js
-* DOM content loaded event handling
-* Search bar event detection
-* Product search filtering
-* Add To Cart button event handling
-* Browser console logging
+https://ecommerce-backend-vnw2.onrender.com
 
 ---
 
-## Project Structure
+# ✨ Features
+
+## Customer
+
+- User Registration
+- User Login
+- Logout
+- Welcome User
+- Product Search
+- Product Details
+- Add to Cart
+- Remove from Cart
+- Dynamic Cart using Local Storage
+- Continue Shopping
+- Responsive Navigation
+
+## Product
+
+- Featured Products
+- Categories Section
+- Product Details
+- Product Specifications
+- Product Reviews
+- Related Products
+
+## Shopping Cart
+
+- Dynamic Cart
+- Total Items
+- Total Price
+- Remove Products
+- Checkout Button
+
+## UI
+
+- Responsive Layout
+- Hero Banner
+- Today's Offers
+- Hover Effects
+- Search Bar
+- Footer
+- Modern Design
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Backend
+
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- Spring Security
+- Maven
+
+## Database
+
+- H2 Database
+
+## Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
+- Docker
+
+## Tools
+
+- Git
+- GitHub
+- VS Code
+
+---
+
+# 📂 Project Structure
 
 ```text
 ecommerce-platform
@@ -112,11 +105,12 @@ ecommerce-platform
 ├── backend
 │   ├── src
 │   ├── pom.xml
+│   ├── Dockerfile
 │   ├── mvnw
 │   └── mvnw.cmd
 │
 ├── frontend
-│   ├── home.html
+│   ├── index.html
 │   ├── login.html
 │   ├── register.html
 │   ├── seller-login.html
@@ -134,104 +128,121 @@ ecommerce-platform
 
 ---
 
-## Database
+# 🗄 Database
 
-### Database Name
+Database Engine
 
-```sql
-ecommerce_db
+```
+H2 Database
 ```
 
-### Current Table
+Current Table
 
-```sql
-user
+```
+users
 ```
 
-### User Fields
+Fields
 
-| Field    | Type   |
-| -------- | ------ |
-| id       | Long   |
-| name     | String |
-| email    | String |
+| Field | Type |
+|------|------|
+| id | Long |
+| name | String |
+| email | String |
 | password | String |
 
 ---
 
-## Available Pages
+# 🚀 Running Locally
 
-### Home Page
-
-* Home page
-* Hero banner section
-* Categories section
-* Featured products
-* Product cards
-* Customer benefits section
-* Product search functionality
-
-### Authentication
-
-* Customer Login
-* Customer Registration
-* Seller Login
-
-### Shopping
-
-* Product Details Page
-* Shopping Cart Page
-
----
-
-## Running the Backend
+## Backend
 
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
 
-Backend URL:
+Backend
 
-```text
+```
 http://localhost:8080
 ```
 
 ---
 
-## Running the Frontend
+## Frontend
 
-Open with Live Server:
+Open
 
-```text
-frontend/home.html
+```
+frontend/index.html
 ```
 
-Frontend URL:
+using Live Server.
 
-```text
-http://127.0.0.1:5500/frontend/home.html
+---
+
+# 📦 Deployment
+
+Frontend
+
+```
+Vercel
+```
+
+Backend
+
+```
+Render
+```
+
+Container
+
+```
+Docker
 ```
 
 ---
 
-## Planned Features
+# 📌 Current Features
 
-* User Login API
-* User Registration API Integration
-* Password Encryption
-* JWT Authentication
-* Product Management
-* Dynamic Product Listing
-* Shopping Cart Functionality
-* Order Management
-* Wishlist
-* Seller Dashboard
-* Admin Dashboard
-* Payment Gateway Integration
+- Spring Boot REST API
+- H2 Database Integration
+- User Authentication
+- Registration API
+- Login API
+- Search Products
+- Shopping Cart
+- Product Details
+- Responsive Design
+- Live Deployment
+- Dockerized Backend
 
 ---
 
-## Author
+# 🚧 Future Enhancements
 
-Ranga Sai
+- Password Encryption (BCrypt)
+- JWT Authentication
+- Product Management
+- Dynamic Product Catalog
+- Order Management
+- Wishlist
+- Seller Dashboard
+- Admin Dashboard
+- Payment Gateway
+- User Profile
+- Order History
+- Product Images Upload
+
+---
+
+# 👨‍💻 Author
+
+**Ranga Sai**
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
