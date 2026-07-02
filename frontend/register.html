@@ -70,22 +70,24 @@
 
 document.getElementById("registerBtn").addEventListener("click", async () => {
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
+
+    const message = document.getElementById("message");
 
     if (!name || !email || !password) {
 
-        document.getElementById("message").innerText =
-            "Please fill all fields.";
-
+        message.style.color = "red";
+        message.innerText = "Please fill all fields.";
         return;
+
     }
 
     try {
 
         const response = await fetch(
-            "http://localhost:8080/auth/register",
+            "https://ecommerce-backend-vnw2.onrender.com/auth/register",
             {
                 method: "POST",
                 headers: {
@@ -100,15 +102,31 @@ document.getElementById("registerBtn").addEventListener("click", async () => {
         );
 
         const result = await response.text();
-        
-        document.getElementById("message").innerText = result; 
-    
+
+        if (result === "Email already registered") {
+
+            message.style.color = "red";
+            message.innerText = result;
+
+        } else {
+
+            message.style.color = "green";
+            message.innerText = "Registration Successful!";
+
+            setTimeout(() => {
+
+                window.location.href = "login.html";
+
+            }, 1200);
+
+        }
+
     } catch (error) {
 
-        document.getElementById("message").innerText =
-            "Backend connection error.";
-
         console.error(error);
+
+        message.style.color = "red";
+        message.innerText = "Unable to connect to server.";
 
     }
 

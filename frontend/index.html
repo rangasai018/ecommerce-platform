@@ -256,33 +256,35 @@
 
     <script>
 
-    const userName = sessionStorage.getItem("loggedInUser");
+        const userName = sessionStorage.getItem("loggedInUser");
 
-    const loginLink = document.getElementById("loginLink");
-    const sellerLink = document.getElementById("sellerLink");
-    const logoutBtn = document.getElementById("logoutBtn");
+        const logo = document.querySelector(".logo");
+        const loginLink = document.getElementById("loginLink");
+        const sellerLink = document.getElementById("sellerLink");
+        const logoutBtn = document.getElementById("logoutBtn");
 
-    if (userName) {
+        if (userName) {
 
-        document.querySelector(".logo").innerHTML =
-            "E-Shop | Welcome, " + userName;
+            logo.innerHTML = `E-Shop | Welcome, ${userName}`;
 
-        loginLink.style.display = "none";
-        sellerLink.style.display = "none";
+            loginLink.style.display = "none";
+            sellerLink.style.display = "none";
 
-    } else {
+        } else {
 
-        logoutBtn.style.display = "none";
+            logoutBtn.style.display = "none";
 
-    }
+        }
 
-    logoutBtn.addEventListener("click", () => {
+        logoutBtn.addEventListener("click", function (e) {
 
-        sessionStorage.removeItem("loggedInUser");
+            e.preventDefault();
 
-        window.location.href = "login.html";
+            sessionStorage.removeItem("loggedInUser");
 
-    });
+            window.location.href = "login.html";
+
+        });
 
     </script>
 

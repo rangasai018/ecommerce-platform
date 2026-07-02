@@ -63,21 +63,22 @@
 
 document.getElementById("loginBtn").addEventListener("click", async () => {
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
+
+    const message = document.getElementById("message");
 
     if (!email || !password) {
 
-        document.getElementById("message").innerText =
-            "Please fill all fields.";
-
+        message.innerText = "Please fill all fields.";
         return;
+
     }
 
     try {
 
         const response = await fetch(
-            "http://localhost:8080/auth/login",
+            "https://ecommerce-backend-vnw2.onrender.com/auth/login",
             {
                 method: "POST",
                 headers: {
@@ -89,27 +90,38 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
                 })
             }
         );
-        
-        const result = await response.json();
-        
-        if (result.name) {
-            document.getElementById("message").innerText = "Login Successful";
-            sessionStorage.setItem("loggedInUser", result.name);
+
+        const result = await response.text();
+
+        if (result === "Login Successful") {
+
+            message.style.color = "green";
+            message.innerText = "Login Successful";
+
+            sessionStorage.setItem(
+                "loggedInUser",
+                email.split("@")[0]
+            );
+
+            setTimeout(() => {
+
+                window.location.href = "index.html";
+
+            }, 1000);
+
+        } else {
+
+            message.style.color = "red";
+            message.innerText = "Invalid Email or Password";
+
         }
-        setTimeout(() => {
-            window.location.href = "home.html";
-        }, 1500);
-    
-    } else {
-        document.getElementById("message").innerText = "Invalid Email or Password";
-    }
 
     } catch (error) {
 
-        document.getElementById("message").innerText =
-            "Backend connection error.";
-
         console.error(error);
+
+        message.style.color = "red";
+        message.innerText = "Unable to connect to server.";
 
     }
 
