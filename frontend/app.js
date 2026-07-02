@@ -52,6 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
             let cart =
                 JSON.parse(localStorage.getItem("cart")) || [];
 
+            const alreadyExists = cart.find(
+                item => item.name === productName
+            );
+
+            if (alreadyExists) {
+
+                alert(productName + " is already in your cart.");
+                return;
+
+            }
+
             cart.push({
                 name: productName,
                 price: productPrice
@@ -62,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 JSON.stringify(cart)
             );
 
-            alert(productName + " added to cart");
+            alert(productName + " added to cart successfully!");
 
         });
 
